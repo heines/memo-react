@@ -1,0 +1,15 @@
+{
+  "name": "memo-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github:heines/memo-react.git"
+  },
+  "author": "heine.shimizu",
+  "license": "ISC"
+}
