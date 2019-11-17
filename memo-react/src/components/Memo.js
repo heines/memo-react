@@ -9,9 +9,15 @@ const StyledMemo = styled.div`
   overflow-x: auto;
 `;
 
-const Memo = () => {
+const Memo = (props) => {
+  const todo = props.todo;
+  const todoMemos = todo.map((memo) => (
+    <StyledMemo>{memo.memo}</StyledMemo>
+  ));
   return (
-    <StyledMemo>めも</StyledMemo>
+    <div>
+      {todoMemos}
+    </div>
   )
 };
 

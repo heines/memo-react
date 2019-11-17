@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Form = () => {
+const Form = (props) => {
   return (
     <div>
-      <form>
+      <form
+        onSubmit={props.handleAdd}
+      >
         <textarea
+          name="memo"
           placeholder="memo"
         ></textarea>
         <button>submit</button>
