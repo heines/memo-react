@@ -1,23 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import Pad from './Pad';
 
 const StyledMemo = styled.div`
   width: 20vw;
   height: 20vw;
   padding: 1em;
-  background: #e1f0fa;
+  margin-left: ${ props => props.marginLeft };
+  margin-bottom: ${ props => props.marginBottom };
+  background: ${ props => {
+    switch(props.priority) {
+      case 'high':
+        return '#fae1e3';
+      default:
+        return '#e1f0fa';
+    }
+  } };
+  overflow-wrap : break-word;
   overflow-x: auto;
 `;
 
 const Memo = (props) => {
-  const todo = props.todo;
-  const todoMemos = todo.map((memo) => (
-    <StyledMemo>{memo.memo}</StyledMemo>
+  const todoMemos = props.todo.map((memo, i) => (
+    <StyledMemo
+      marginLeft = '1em'
+      marginBottom = '1em'
+      priority = {memo.priority}
+      key = {i}
+    >{memo.memo}</StyledMemo>
   ));
   return (
-    <div>
+    <Pad>
       {todoMemos}
-    </div>
+    </Pad>
   )
 };
 

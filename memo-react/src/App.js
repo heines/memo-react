@@ -13,9 +13,12 @@ class App extends React.Component {
 
   handleAdd(e) {
     e.preventDefault();
-    this.state.todo.push({memo: e.target.memo.value})
-    this.setState({todo: this.state.todo});
-    e.target.memo.value = "";
+    if(e.target.memo.value) {
+      this.state.todo.push({memo: e.target.memo.value, priority: e.target.priority.checked ? e.target.priority.value : "low"})
+      this.setState({todo: this.state.todo});
+      e.target.memo.value = "";
+      e.target.priority.checked = false;
+    }
   }
 
   render() {
