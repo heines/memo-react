@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
+import IconCheckBox from './IconCheckBox';
+import IconCheckBoxOutline from './IconCheckBoxOutline';
+import FlexBox from './FlexBox';
 
 const StyledFrom = styled.form`
   width: 20vw;
@@ -21,11 +24,12 @@ const StyledFrom = styled.form`
     display: none;
   }
   label {
-    display: block;
+    display: inline-flex;
     padding: 0.25em 0.5em;
     margin-left: auto;
     margin-right: 0;
     cursor: pointer;
+    border-radius: 3%;
   }
   input[type="checkbox"]:checked + label{
     background: #fae1e3;
@@ -33,6 +37,7 @@ const StyledFrom = styled.form`
 `;
 
 const Form = (props) => {
+  console.log(props);
   return (
     <StyledFrom
       onSubmit={props.handleAdd}
@@ -45,7 +50,7 @@ const Form = (props) => {
       />
       <label
         htmlFor="high"
-      >優先度高</label>
+      ><IconCheckBox />優先度高</label>
       <textarea
         name="memo"
         placeholder="memo"
