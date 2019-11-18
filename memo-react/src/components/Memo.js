@@ -1,13 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Pad from './Pad';
+import Corner from './Corner';
 
 const StyledMemo = styled.div`
   width: 20vw;
   height: 20vw;
+  min-width: 150px;
+  min-height: 150px;
+  position: relative;
   padding: 1em;
   margin-left: ${ props => props.marginLeft };
   margin-bottom: ${ props => props.marginBottom };
+  box-sizing: border-box;
   background: ${ props => {
     switch(props.priority) {
       case 'high':
@@ -27,7 +32,7 @@ const Memo = (props) => {
       marginBottom = '1em'
       priority = {memo.priority}
       key = {i}
-    >{memo.memo}</StyledMemo>
+    >{memo.memo}<Corner onClick={() => props.handleDel(memo)} text="delete?"></Corner></StyledMemo>
   ));
   return (
     <Pad>

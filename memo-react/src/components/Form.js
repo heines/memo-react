@@ -5,10 +5,13 @@ import Button from './Button';
 const StyledFrom = styled.form`
   width: 20vw;
   height: 20vw;
+  min-width: 150px;
+  min-height: 150px;
   padding: 1em;
   margin-left: 1em;
   margin-bottom: 1em;
   background: #eee;
+  box-sizing: border-box;
   textarea {
     height: calc(100% - 5em);
     width: 100%;
@@ -41,7 +44,7 @@ const Form = (props) => {
         id="high"
       />
       <label
-        for="high"
+        htmlFor="high"
       >優先度高</label>
       <textarea
         name="memo"
