@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Pad from './Pad';
-import Corner from './Corner';
-import TextInline from './TextInline';
-import IconAccessTime from './IconAccessTime';
+import Pad from '../atoms/Pad';
+import Corner from '../atoms/Corner';
+import TextInline from '../atoms/TextInline';
+import IconAccessTime from '../atoms/IconAccessTime';
 
 const StyledTextInline = styled(TextInline)`
   position: absolute;

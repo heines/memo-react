@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
-import IconCheckBox from './IconCheckBox';
-import IconCheckBoxOutline from './IconCheckBoxOutline';
+import Button from '../atoms/Button';
+import IconCheckBox from '../atoms/IconCheckBox';
+import IconCheckBoxOutline from '../atoms/IconCheckBoxOutline';
 
 const StyledFrom = styled.form`
   width: 20vw;

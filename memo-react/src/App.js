@@ -1,6 +1,6 @@
 import React from 'react';
-import Memo from './components/Memo';
-import Form from './components/Form';
+import Memo from './components/organisms/Memo';
+import Form from './components/organisms/Form';
 import moment from 'moment';
 
 class App extends React.Component {
