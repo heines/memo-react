@@ -2,16 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Pad from '../atoms/Pad';
 import Corner from '../atoms/Corner';
-import TextInline from '../atoms/TextInline';
-import IconAccessTime from '../atoms/IconAccessTime';
-
-const StyledTextInline = styled(TextInline)`
-  position: absolute;
-  right: 1em;
-  bottom: 0.5em;
-  display: inline-flex;
-  align-items: center;
-`;
+import AccessTime from '../molecules/AccessTime';
 
 const StyledMemo = styled.div`
   width: 20vw;
@@ -45,10 +36,7 @@ const Memo = (props) => {
     >
       {memo.memo}
       <Corner onClick={() => props.handleDel(memo)} text="del"></Corner>
-      <StyledTextInline>
-        <IconAccessTime />
-        {memo.date}
-      </StyledTextInline>
+      <AccessTime time={memo.date} />
     </StyledMemo>
   ));
   return (
