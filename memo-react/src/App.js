@@ -36,6 +36,7 @@ class App extends React.Component {
         date: date,
       })
       this.setState({todo: this.state.todo});
+      this.setState({priority: false});
       e.target.memo.value = "";
       e.target.priority.checked = false;
       this.addTodo();
@@ -43,7 +44,7 @@ class App extends React.Component {
   }
 
   handlePriority(e) {
-    this.setState({priority: !e.target.checked});
+    this.setState({priority: e.target.checked});
   }
 
   handleDel(memo) {
