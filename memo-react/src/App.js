@@ -1,6 +1,7 @@
 import React from 'react';
 import Memo from './components/Memo';
-import Form from './components/Form'
+import Form from './components/Form';
+import moment from 'moment';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,12 +26,14 @@ class App extends React.Component {
 
   handleAdd(e) {
     e.preventDefault();
+    let date = moment().format('YY/MM/DD hh:mm');
     if(e.target.memo.value) {
+      // console.log(dates);
       this.state.todo.push({
         memo: e.target.memo.value,
-        priority: e.target.priority.checked ? e.target.priority.value : "low"},
-        // date: new Date().toString
-      )
+        priority: e.target.priority.checked ? e.target.priority.value : "low",
+        date: date,
+      })
       this.setState({todo: this.state.todo});
       e.target.memo.value = "";
       e.target.priority.checked = false;

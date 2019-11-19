@@ -2,6 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Pad from './Pad';
 import Corner from './Corner';
+import TextInline from './TextInline';
+import FlexBox from './FlexBox';
+
+const StyledTextInline = styled(TextInline)`
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+`;
 
 const StyledMemo = styled.div`
   width: 20vw;
@@ -32,7 +40,13 @@ const Memo = (props) => {
       marginBottom = '1em'
       priority = {memo.priority}
       key = {i}
-    >{memo.memo}<Corner onClick={() => props.handleDel(memo)} text="delete?"></Corner></StyledMemo>
+    >
+      {memo.memo}
+      <Corner onClick={() => props.handleDel(memo)} text="delete?"></Corner>
+      <StyledTextInline>
+        {memo.date}
+      </StyledTextInline>
+    </StyledMemo>
   ));
   return (
     <Pad>
