@@ -7,10 +7,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      todo: JSON.parse(localStorage.getItem("todo")) || []
+      todo: JSON.parse(localStorage.getItem("todo")) || [],
+      priority: false,
     };
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDel = this.handleDel.bind(this);
+    this.handlePriority = this.handlePriority.bind(this);
   }
 
   // todoList itemの追加
@@ -28,7 +30,6 @@ class App extends React.Component {
     e.preventDefault();
     let date = moment().format('YY/MM/DD hh:mm');
     if(e.target.memo.value) {
-      // console.log(dates);
       this.state.todo.push({
         memo: e.target.memo.value,
         priority: e.target.priority.checked ? e.target.priority.value : "low",
@@ -41,6 +42,10 @@ class App extends React.Component {
     }
   }
 
+  handlePriority(e) {
+    this.setState({priority: !e.target.checked});
+  }
+
   handleDel(memo) {
     this.setState({
       todo: this.state.todo.filter(x => x !== memo)
@@ -51,7 +56,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Form handleAdd={this.handleAdd}/>
+        <Form
+          priority={this.state.priority}
+          handleAdd={this.handleAdd}
+          handlePriority={this.handlePriority}
+        />
         <Memo todo={this.state.todo} handleDel={this.handleDel}/>
       </div>
     );

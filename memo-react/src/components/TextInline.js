@@ -1,8 +1,7 @@
-import react from 'react';
 import styled from 'styled-components';
 
 const TextInine = styled.span`
-  color: #CCC;
+  color: #999;
   font-size: 0.7em;
 `;
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Corner = styled.div`
@@ -13,13 +12,14 @@ const Corner = styled.div`
   &::after {
     position: absolute;
     left: -15px;
-    bottom: 0;
+    bottom: 0.5em;
     content: "${props => props.text}";
     opacity: 0;
     transition-property: opacity;
     transition-duration: .2s;
     transition-delay: 0.1s;
-    color: #CCC;
+    color: #ff5764;
+    font-size: 0.7em;
   }
   &:hover {
     border-left: 20px solid rgba(0, 0, 0, 00);

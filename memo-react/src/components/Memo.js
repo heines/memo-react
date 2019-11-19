@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Pad from './Pad';
 import Corner from './Corner';
 import TextInline from './TextInline';
-import FlexBox from './FlexBox';
 import IconAccessTime from './IconAccessTime';
 
 const StyledTextInline = styled(TextInline)`
@@ -45,7 +44,7 @@ const Memo = (props) => {
       key = {i}
     >
       {memo.memo}
-      <Corner onClick={() => props.handleDel(memo)} text="delete?"></Corner>
+      <Corner onClick={() => props.handleDel(memo)} text="del"></Corner>
       <StyledTextInline>
         <IconAccessTime />
         {memo.date}

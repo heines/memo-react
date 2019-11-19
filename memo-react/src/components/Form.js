@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Button from './Button';
 import IconCheckBox from './IconCheckBox';
 import IconCheckBoxOutline from './IconCheckBoxOutline';
-import FlexBox from './FlexBox';
 
 const StyledFrom = styled.form`
   width: 20vw;
@@ -24,33 +23,38 @@ const StyledFrom = styled.form`
     display: none;
   }
   label {
-    display: inline-flex;
+    width: 6em;
+    display: flex;
     padding: 0.25em 0.5em;
     margin-left: auto;
     margin-right: 0;
     cursor: pointer;
-    border-radius: 3%;
-  }
-  input[type="checkbox"]:checked + label{
-    background: #fae1e3;
+    border-radius: 5%;
   }
 `;
 
 const Form = (props) => {
-  console.log(props);
   return (
     <StyledFrom
       onSubmit={props.handleAdd}
     >
-      <input
+      <label
+        htmlFor="high"
+      ><input
         name="priority"
         type="checkbox"
         value="high"
         id="high"
-      />
-      <label
-        htmlFor="high"
-      ><IconCheckBox />優先度高</label>
+        onClick={props.handlePriority}
+      />{
+        (() => {
+          if(props.priority) {
+            return <IconCheckBox />
+          } else {
+            return <IconCheckBoxOutline />
+          }
+        })()
+      }優先度高</label>
       <textarea
         name="memo"
         placeholder="memo"
