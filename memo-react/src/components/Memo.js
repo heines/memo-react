@@ -4,11 +4,14 @@ import Pad from './Pad';
 import Corner from './Corner';
 import TextInline from './TextInline';
 import FlexBox from './FlexBox';
+import IconAccessTime from './IconAccessTime';
 
 const StyledTextInline = styled(TextInline)`
   position: absolute;
   right: 1em;
   bottom: 0.5em;
+  display: inline-flex;
+  align-items: center;
 `;
 
 const StyledMemo = styled.div`
@@ -44,6 +47,7 @@ const Memo = (props) => {
       {memo.memo}
       <Corner onClick={() => props.handleDel(memo)} text="delete?"></Corner>
       <StyledTextInline>
+        <IconAccessTime />
         {memo.date}
       </StyledTextInline>
     </StyledMemo>
