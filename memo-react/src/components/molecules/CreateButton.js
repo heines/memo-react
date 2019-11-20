@@ -6,6 +6,7 @@ import COLOR from '../_const/COLOR';
 
 const StyledFlexBox = styled(FlexBox)`
   display: inline-flex;
+  align-items: center;
   padding: 1em;
   margin: 0.5em 1em;
   cursor: pointer;
