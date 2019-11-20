@@ -2,6 +2,8 @@ import React from 'react';
 import Memo from './components/organisms/Memo';
 import Form from './components/organisms/Form';
 import moment from 'moment';
+import Modal from './components/atoms/Modal';
+import CreateButton from './components/molecules/CreateButton';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,10 +11,12 @@ class App extends React.Component {
     this.state = {
       todo: JSON.parse(localStorage.getItem("todo")) || [],
       priority: false,
+      isModal: false,
     };
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDel = this.handleDel.bind(this);
     this.handlePriority = this.handlePriority.bind(this);
+    this.handleShowModal = this.handleShowModal.bind(this);
   }
 
   // todoList itemの追加
@@ -54,14 +58,21 @@ class App extends React.Component {
     this.removeTodo(memo);
   }
 
+  handleShowModal() {
+    this.setState({isModal: !this.state.isModal});
+  }
+
   render() {
     return (
       <div>
-        <Form
-          priority={this.state.priority}
-          handleAdd={this.handleAdd}
-          handlePriority={this.handlePriority}
-        />
+        <Modal isModal={this.state.isModal}>
+          <Form
+            priority={this.state.priority}
+            handleAdd={this.handleAdd}
+            handlePriority={this.handlePriority}
+          />
+        </Modal>
+        <CreateButton handleShowModal={this.handleShowModal}/>
         <Memo todo={this.state.todo} handleDel={this.handleDel}/>
       </div>
     );

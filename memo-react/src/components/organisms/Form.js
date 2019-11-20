@@ -10,8 +10,6 @@ const StyledFrom = styled.form`
   min-width: 150px;
   min-height: 150px;
   padding: 1em;
-  margin-left: 1em;
-  margin-bottom: 1em;
   background: #eee;
   box-sizing: border-box;
   textarea {
