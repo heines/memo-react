@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Button from '../atoms/Button';
 
 const StyledModal = styled.div`
   display: block;
@@ -19,6 +20,7 @@ const Modal = (props) => {
         isModal &&
           <StyledModal>
             {props.children}
+            <Button onClick={props.handleShowModal}>Close</Button>
           </StyledModal>
       }
     </div>

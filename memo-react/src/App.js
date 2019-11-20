@@ -59,13 +59,17 @@ class App extends React.Component {
   }
 
   handleShowModal() {
+    console.log("pass");
     this.setState({isModal: !this.state.isModal});
   }
 
   render() {
     return (
       <div>
-        <Modal isModal={this.state.isModal}>
+        <Modal
+          isModal={this.state.isModal}
+          handleShowModal={this.handleShowModal}
+        >
           <Form
             priority={this.state.priority}
             handleAdd={this.handleAdd}
