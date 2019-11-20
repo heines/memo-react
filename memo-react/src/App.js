@@ -32,7 +32,7 @@ class App extends React.Component {
 
   handleAdd(e) {
     e.preventDefault();
-    let date = moment().format('YY/MM/DD hh:mm');
+    let date = moment().format('YY/MM/DD kk:mm');
     if(e.target.memo.value) {
       this.state.todo.push({
         memo: e.target.memo.value,
