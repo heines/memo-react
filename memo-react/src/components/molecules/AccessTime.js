@@ -15,7 +15,7 @@ const AccessTime = (props) => {
   return (
     <StyledTextInline>
       <IconAccessTime />
-      {props.time}
+      {props.children}
     </StyledTextInline>
   )
 }

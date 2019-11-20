@@ -36,7 +36,7 @@ const Memo = (props) => {
     >
       {memo.memo}
       <Corner onClick={() => props.handleDel(memo)} text="del"></Corner>
-      <AccessTime time={memo.date} />
+      <AccessTime>{memo.date}</AccessTime>
     </StyledMemo>
   ));
   return (
