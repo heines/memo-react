@@ -10,12 +10,18 @@ const StyledFrom = styled.form`
   min-width: 150px;
   min-height: 150px;
   padding: 1em;
-  background: #eee;
+  background: #fff;
   box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: calc(100% - 2em);
+    box-sizing: border-box;
+  }
   textarea {
-    height: calc(100% - 5em);
+    height: calc(100% - 2.5em);
     width: 100%;
     box-sizing: border-box;
+    font-size: 1.5em;
   }
   input[type="checkbox"] {
     display: none;

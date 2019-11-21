@@ -10,6 +10,13 @@ const StyledModal = styled.div`
   padding: 1em;
   background: rgba(0, 0, 0, 0.5);
   z-index: 100;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
 `;
 
 const Modal = (props) => {
