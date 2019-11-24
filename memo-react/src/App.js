@@ -74,6 +74,7 @@ class App extends React.Component {
             priority={this.state.priority}
             handleAdd={this.handleAdd}
             handlePriority={this.handlePriority}
+            handleShowModal={this.handleShowModal}
           />
         </Modal>
         <CreateButton handleShowModal={this.handleShowModal}/>

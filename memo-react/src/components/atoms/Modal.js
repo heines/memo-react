@@ -5,7 +5,7 @@ import Button from '../atoms/Button';
 const StyledModal = styled.div`
   display: block;
   position: fixed;
-  left: calc(50% - 10vw);
+  left: calc(50% - 20vw);
   top: 5em;
   padding: 1em;
   background: rgba(0, 0, 0, 0.5);
