@@ -44,6 +44,7 @@ class App extends React.Component {
       e.target.memo.value = "";
       e.target.priority.checked = false;
       this.addTodo();
+      this.handleShowModal();
     }
   }
 
@@ -68,7 +69,6 @@ class App extends React.Component {
       <div>
         <Modal
           isModal={this.state.isModal}
-          handleShowModal={this.handleShowModal}
         >
           <Form
             priority={this.state.priority}

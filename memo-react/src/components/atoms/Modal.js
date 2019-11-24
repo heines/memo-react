@@ -27,7 +27,6 @@ const Modal = (props) => {
         isModal &&
           <StyledModal>
             {props.children}
-            <Button onClick={props.handleShowModal}>Close</Button>
           </StyledModal>
       }
     </div>
