@@ -4,6 +4,7 @@ import Button from '../atoms/Button';
 import IconCheckBox from '../atoms/IconCheckBox';
 import IconCheckBoxOutline from '../atoms/IconCheckBoxOutline';
 import FlexBox from '../atoms/FlexBox';
+import COLOR from '../_const/COLOR';
 
 const StyledFrom = styled.form`
   width: 50vw;
@@ -18,7 +19,7 @@ const StyledFrom = styled.form`
     height: calc(100% - 2em);
   }
   textarea {
-    height: calc(100% - 2.5em);
+    height: calc(100% - 5em);
     width: 100%;
     padding: .5em;
     box-sizing: border-box;
@@ -32,11 +33,28 @@ const StyledFrom = styled.form`
   label {
     width: 6em;
     display: flex;
+    align-items: center;
     padding: 0.25em 0.5em;
     margin-left: auto;
     margin-right: 0;
     cursor: pointer;
     border-radius: 5%;
+  }
+`;
+
+const StyledButton = styled(FlexBox)`
+  display: inline;
+  align-items: center;
+  padding: 0.3em 1em;
+  margin: 1em 0.5em 1em 0;
+  cursor: pointer;
+  border-radius: 0.3em;
+  border: 1px solid #CCC;
+  transition: background .2s, border .2s;
+  &:hover {
+    background: #CCC;
+    border: 1px solid transparent;
+    color: #FFF;
   }
 `;
 
@@ -46,10 +64,9 @@ const Form = (props) => {
       onSubmit={props.handleAdd}
     >
       <FlexBox>
-        <Button
-          width='auto'
+        <StyledButton
           onClick={props.handleShowModal}
-        >Close</Button>
+        >Close</StyledButton>
         <label
           htmlFor="high"
         ><input
