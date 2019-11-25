@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/memo-react/static/js/main.03d16820.chunk.js",
-    "main.js.map": "/memo-react/static/js/main.03d16820.chunk.js.map",
+    "main.js": "/memo-react/static/js/main.cde63c41.chunk.js",
+    "main.js.map": "/memo-react/static/js/main.cde63c41.chunk.js.map",
     "runtime-main.js": "/memo-react/static/js/runtime-main.fe0d077b.js",
     "runtime-main.js.map": "/memo-react/static/js/runtime-main.fe0d077b.js.map",
     "static/js/2.83abd1dc.chunk.js": "/memo-react/static/js/2.83abd1dc.chunk.js",
     "static/js/2.83abd1dc.chunk.js.map": "/memo-react/static/js/2.83abd1dc.chunk.js.map",
     "index.html": "/memo-react/index.html",
-    "precache-manifest.8cdb0cfe2dd1eacff719f66031814d3b.js": "/memo-react/precache-manifest.8cdb0cfe2dd1eacff719f66031814d3b.js",
+    "precache-manifest.18c51e3950219cebc2f955fd91a1d0b1.js": "/memo-react/precache-manifest.18c51e3950219cebc2f955fd91a1d0b1.js",
     "service-worker.js": "/memo-react/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.fe0d077b.js",
     "static/js/2.83abd1dc.chunk.js",
-    "static/js/main.03d16820.chunk.js"
+    "static/js/main.cde63c41.chunk.js"
   ]
 }

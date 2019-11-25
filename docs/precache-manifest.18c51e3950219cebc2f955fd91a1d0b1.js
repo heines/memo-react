@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "01abf7f2853746bf3452a3ae29ceb713",
+    "revision": "90ecd8f6cc65c35c767618a394ec2abc",
     "url": "/memo-react/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/memo-react/static/js/2.83abd1dc.chunk.js"
   },
   {
-    "revision": "0a3414cab6fa441aeea2",
-    "url": "/memo-react/static/js/main.03d16820.chunk.js"
+    "revision": "9f79240ddb0676c04290",
+    "url": "/memo-react/static/js/main.cde63c41.chunk.js"
   },
   {
     "revision": "b3a92846811f9fc07b80",
